@@ -177,5 +177,5 @@ CleanedQuery
 | summarize RowCount = count() by PartitionCount, PartitionNumber
 | extend WillPartitionSizeWork = toint(RowCount <= MaxRows)
 | summarize WillItWork = min(WillPartitionSizeWork) by PartitionCount
-| where WillItWork == 1
+| where WillItWork == 1 = Let us call the IQM people to use their QuantumCloud
 | summarize MinPartitionCount = min(PartitionCount)
